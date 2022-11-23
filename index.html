@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apple Products</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <a href="index.html">
+    <img class="logo" src="IMAGES/apple.png" width=70px height=70px>
+    </a>
+    <nav id="nav">
+        <a href="iphone.html">
+            <span>iPhone 14 Pro Max</span>
+            <img src="IMAGES/IPHONE14.png">
+        </a>
+        <a href="pro.html">
+            <span>Airpods Pro (2nd Gen)</span>
+            <img src="IMAGES/AIRPODSPRO 2.png">
+        </a>
+        <a href="ultra.html">
+            <span>Apple Watch Ultra</span>
+            <img src="IMAGES/WATCH ULTRA.png">
+        </a>
+        <a href="mac.html">
+            <span>"16 Macbook Pro</span>
+            <img src="IMAGES/MACBOOK.png">
+        </a>
+        <a href="watch8.html">
+            <span>Apple Watch Series 8</span>
+            <img src="IMAGES/WATCH SERIES8.png">
+        </a>
+        <a href="max.html">
+            <span>Airpods Pro Max</span>
+            <img src="IMAGES/AIRPODPROMAX.png">
+        </a>
+    </nav>
+    <script>
+        const nav = document.getElementById("nav");
+
+for(const link of nav.getElementsByTagName("a")) {  
+  link.onmousemove = e => {
+    const rect = link.getBoundingClientRect(),    
+          img = link.querySelector("img");
+    
+    img.style.left = `${e.clientX - rect.left}px`;
+    img.style.top = `${e.clientY - rect.top}px`;
+  }
+}
+    </script>
+</body>
+</html>

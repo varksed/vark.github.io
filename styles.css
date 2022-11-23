@@ -1,0 +1,93 @@
+body {
+    background-color: rgb(0, 0, 0);
+    margin: 0px;
+   }
+  /* index.html */
+
+.logo {
+  margin-top: 10vh;
+}
+  nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+  }
+  
+  nav > a {
+    color: rgba(255, 255, 255, 0.25);
+    font-family: "Open Sans", sans-serif;
+    font-size: clamp(3rem, 8vw, 10rem);
+    font-weight: 300;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  nav > a:hover {
+    color: white;
+    transition-duration: 600ms;
+  }
+  
+  nav > a > span {
+    display: block;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    position: relative;
+    z-index: 2;
+  }
+  
+  nav > a:hover > span {  
+    border-top-color: #d4d4d4;
+    border-bottom-color: #d4d4d4;
+  }
+  
+  nav > a > img {
+    position: absolute;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: transform 250ms, opacity 250ms;
+    pointer-events: none;
+    width: min(40vw, 500px);
+  }
+  
+  nav > a:hover > img {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  /* products styling */
+body {
+    font-family: "Open Sans", sans-serif;
+    padding: clamp(1rem, 5vw, 6rem);
+}
+.product-name {
+    color: white;
+    font-size: clamp(3rem, 5vw, 6rem);
+    margin-top: 10vh;
+}
+p {
+    color: white;
+}
+
+.backhome {
+    font-style: italic;
+    color: #217bd0;
+    font-size: clamp(1rem, 2vw, 2rem);
+    text-decoration: none;
+}
+
+.desc {
+    font-size: clamp(1rem, 2vw, 4rem);
+}
+
+h3 {
+    color:rgba(213, 105, 255, 1);
+    font-size: clamp(4rem, 2vw, 4rem);
+}
+
+.productimage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1in;
+  width: 60%;
+}
